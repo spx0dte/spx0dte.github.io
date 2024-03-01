@@ -44,16 +44,27 @@ You can either:
 2. `buy to open` a credit spread, resulting in a net **debit**
 
 
-### Sell to open credit spread
-
-todo..
-why i sell
-$5 strike price difference
-
 ### Entry
+
+#### Sell to open credit spread
+
+In this strategy, it only uses `sell to open` to enter positions to collect credits.
+
+It can either be `sell to open` `put` credit spread or `call` credit spread.
+
+E.g. `sell to open` put, the following example results in `$0.50` net credit:
+
+| Qty | Strike   | Exp        | Price |
+|-----|----------|------------|-------|
+| +1  | 5040 Put | 2024-02-29 | 1.2   |
+| -1  | 5045 Put | 2024-02-29 | 1.7   |
+
+
+**Note**: In this strategy, `$5` strike price difference is chosen to limit the max loss.
+
 #### Time
 
-#### VIX
+#### Pricing
 
 ### Exit
 #### Profit target
