@@ -30,33 +30,40 @@ The `0dte` strategy only applies to SPX weekly options.
 - Well-defined risk exposure. Never worry about “blowing up” when the market makes a huge move (assuming appropriate position size)
 - Small account size. You can start to trade this strategy with only $500
 
-## Strategy Deep Dive
+## Strategy deep dive
 
-### Data Analysis
+### Credit spread
 
-todo..
+A `credit spread` mean you simultaneously sell one option and buy another option on the `same underlying asset` with the `same expiration date` but `different strike prices`.
 
-### Credit Spread
-todo..
+The option sold typically has a higher premium (credit) than the option bought, resulting in a net credit/debit.
 
-Explain what is a credit spread
+You can either:
 
-$5 strike price difference
+1. `sell to open`a credit spread, resulting in a net **credit**
+2. `buy to open` a credit spread, resulting in a net **debit**
 
-### Sell Credit Spread
+
+### Sell to open credit spread
 
 todo..
 why i sell
+$5 strike price difference
 
-### Profit Target
+### Entry
+#### Time
+
+#### VIX
+
+### Exit
+#### Profit target
 
 60% or $50 profit per credit spread
 
 0.2 or 0.25, 0.3, 0.15 depends on your risk tolerance
 
-### Stop Loss
+#### Stop loss
 
-### VIX
 
 ### When to place the trade
 
@@ -67,13 +74,3 @@ why i sell
 **Remember: one bad trade could wipe out a few good trades**
 
 **.**
-
-### Ircon Condor
-
-### ***(Iron Condor - 90% of the time I do Iron Condors.)***
-
-## FAQs:
-
-## Do you ever roll?
-
-## More Strategies ##
