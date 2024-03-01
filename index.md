@@ -7,5 +7,3 @@
 #
 layout: home
 ---
-
-test
