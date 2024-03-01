@@ -8,7 +8,6 @@
 layout: home
 ---
 
-## **What is SPX 0DTE strategy?**
 
 SPX 0DTE strategy means trading SPX weekly options that expires the same day (a.k.a 0 days to expiration)
 
