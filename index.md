@@ -11,7 +11,7 @@ layout: home
 
 SPX 0DTE strategy means trading SPX weekly options (`SPXW`) that expires the same day (a.k.a 0 days to expiration)
 
-Usually, I open credit spread positions between `9:50-12:00 A.M EST` (`6:50 to 9:00 A.M PST`) and close them before the market closes the same day around `4:00 P.M EST`.
+Usually, I open credit spread positions between `9:50 - 12:00 A.M EST` (`6:50 - 9:00 A.M PST`) and close them before the market closes the same day around `4:00 P.M EST`.
 
 **NOTE**: SPX option is different than SPX weekly option
 
@@ -64,10 +64,21 @@ E.g. `sell to open` put, the following example results in `$0.50` net credit:
 
 #### Time
 
+I try to enter positions between `9:50 - 12:00 A.M EST` (`6:50 - 9:00 A.M PST`), since it is volatile right after the market open. Also I don't want to open positions too late as the time value of credit spread decays.
+
+#### Select strike price
+
+I select the strike price with ~20% probability ITM (or Delta value)
+
 #### Pricing
 
+I seek to open positions with at least `$0.75`.
+
 ### Exit
+
 #### Profit target
+
+The market can swing the day, making a position with profit to loss. Therefore, I always close positions early without holding until the market close.
 
 60% or $50 profit per credit spread
 
