@@ -34,7 +34,7 @@ The `0dte` strategy only applies to SPX weekly options.
 
 ### Credit spread
 
-A `credit spread` mean you simultaneously sell one option and buy another option on the `same underlying asset` with the `same expiration date` but `different strike prices`.
+A `credit spread` means you simultaneously sell one option and buy another option on the `same underlying asset` with the `same expiration date` but `different strike prices`.
 
 The option sold typically has a higher premium (credit) than the option bought, resulting in a net credit/debit.
 
@@ -44,7 +44,7 @@ You can either:
 2. `buy to open` a credit spread, resulting in a net **debit**
 
 
-### Entry
+### Entry rules
 
 #### Sell to open credit spread
 
@@ -72,22 +72,28 @@ I select the strike price with ~20% probability ITM (or Delta value)
 
 #### Pricing
 
-I seek to open positions with at least `$0.75`.
+I seek to open positions with at least `$0.75` credit.
 
-### Exit
+#### Days to avoid trade
 
-#### Profit target
+I usually avoid trading when there is a FOMC meeting or CPI day as the market can be very volatile.
 
-The market can swing the day, making a position with profit to loss. Therefore, I always close positions early without holding until the market close.
+### Exit rules
 
-60% or $50 profit per credit spread
+#### Take profit early
 
-0.2 or 0.25, 0.3, 0.15 depends on your risk tolerance
+The market can swing the day, making a position with profit to loss. Therefore, I always close positions early without holding until the market close, when it reaches the profit target.
+
+My target profit is `60%` of the credit received or `$55` profit per position.
+
+I find that lots of time the price of a credit spread is around `$0.25` but I have to wait several hours until market close. I don't want to take the risk of turning a position with profit to loss. Therefore, I will close it early.
 
 #### Stop loss
 
+It is **vital** to set up stop loss. I have made mistakes not enforcing stop loss strictly, leading to large losses. Usually, it takes a few days to recover from a large loss.
 
-### When to place the trade
+For example, you open a credit spread with `$0.80` credit. If the market goes against you, the position becomes ITM, leading to `$4.20` loss (with `$5` strike price difference). You will need **8** successful trades (e.g. with `$55` profit each trade) to recover this loss. However, If you stop loss at `$3.0` (i.e `$2.20` loss), you only needs around **4** successful trades to recover.
+
 
 ## Lessons Learnt
 
