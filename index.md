@@ -64,7 +64,7 @@ E.g. `sell to open` put, the following example results in `$0.50` net credit:
 
 #### Time
 
-I try to enter positions between `9:50 - 12:00 A.M EST` (`6:50 - 9:00 A.M PST`), since it is volatile right after the market open. Also I don't want to open positions too late as the time value of credit spread decays.
+I try to enter positions between `9:50 - 12:00 A.M EST` (`6:50 - 9:00 A.M PST`). I avoid opening trades right after the market open as it is volatile and hard to tell the SXP moving direction. Also I don't want to open positions too late as the time value of credit spread decays.
 
 #### Select strike price
 
