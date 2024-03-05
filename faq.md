@@ -4,6 +4,6 @@ title: FAQ
 permalink: /faq/
 ---
 
-###  Do you ever roll?
+###  Do I ever roll?
 
-### Why not Icon Condor
+### Why not using Icon Condor

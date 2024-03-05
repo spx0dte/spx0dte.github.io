@@ -20,7 +20,7 @@ Usually, I open credit spread positions between `9:50 - 12:00 A.M EST` (`6:50 - 
 
 The `0dte` strategy only applies to SPX weekly options.
 
-## **Why SPX 0DTE strategy?**
+## Why SPX 0DTE strategy?
 
 - SPX weekly options expire every day. It means you can trade every day.
 - SPX weekly options is highly liquid, you can often execute trades at the prices you want.
@@ -30,7 +30,7 @@ The `0dte` strategy only applies to SPX weekly options.
 - Well-defined risk exposure. Never worry about “blowing up” when the market makes a huge move (assuming appropriate position size)
 - Small account size. You can start to trade this strategy with only $500
 
-## Strategy deep dive
+## Background
 
 ### Credit spread
 
@@ -43,8 +43,6 @@ You can either:
 1. `sell to open`a credit spread, resulting in a net **credit**
 2. `buy to open` a credit spread, resulting in a net **debit**
 
-
-### Entry rules
 
 #### Sell to open credit spread
 
@@ -62,27 +60,37 @@ E.g. `sell to open` put, the following example results in `$0.50` net credit:
 
 **Note**: In this strategy, `$5` strike price difference is chosen to limit the max loss.
 
+## Strategy deep dive
+
+The core of my strategy relies on the following assumptions:
+
+1. In a normal trading day, the daily change of SPX is within a certain range.
+
+2. It follows `mean reversion` pattern. This strategy thinks if SPX drops a lot, it may stop dropping or pop back within the above range
+
+### Entry rules
+
 #### Time
 
 I try to enter positions between `9:50 - 12:00 A.M EST` (`6:50 - 9:00 A.M PST`). I avoid opening trades right after the market open as it is volatile and hard to tell the SXP moving direction. Also I don't want to open positions too late as the time value of credit spread decays.
 
-#### Select strike price
+#### Strike price
 
-I select the strike price with ~20% probability ITM (or Delta value)
+I select the strike price with ~20% to 30% probability ITM (or Delta value).
 
 #### Pricing
 
 I seek to open positions with at least `$0.75` credit.
 
-#### Days to avoid trade
+#### Days to avoid trading
 
 I usually avoid trading when there is a FOMC meeting or CPI day as the market can be very volatile.
 
 ### Exit rules
 
-#### Take profit early
+#### Take profit
 
-The market can swing the day, making a position with profit to loss. Therefore, I always close positions early without holding until the market close, when it reaches the profit target.
+The market can swing during the day, making a position with profit to loss. Therefore, I always close positions early without holding until the market close, when it reaches the profit target.
 
 My target profit is `60%` of the credit received or `$55` profit per position.
 
@@ -97,8 +105,8 @@ For example, you open a credit spread with `$0.80` credit. If the market goes ag
 
 ## Lessons Learnt
 
-***CONSISTENCY: THE KEY TO SUCCESS***
+1. **Consistency is the key to success**
 
-**Remember: one bad trade could wipe out a few good trades**
+2. Always take profit early. There are times that I am greedy, waiting a few hours only for the remaining `$0.20` or `$0.25`, turning a profit into loss
 
-**.**
+3. Enforce stop loss to avoid large losses
