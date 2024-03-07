@@ -6,7 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  SPX 0dte options trading for put credit spread or call credit spread
+  SPX 0dte options trading for put/call credit spread to generate stable income stream
 
 # Build settings
 
