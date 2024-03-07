@@ -5,6 +5,7 @@ permalink: /log/
 ---
 
 Note: `btc` is `buy to close`,`sto` is `sell to open`. (todo: have a better format)
+
 `Time` is `New York Time`
 
 ## 2024
